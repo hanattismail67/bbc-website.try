@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fd95dd3c96.js" crossorigin="anonymous"></script>
+    <title>BBC website</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            background-color:#ffffff;
+        }
+        p{
+            display: inline-block;
+        }
+        .container{
+            width: 100%;
+            margin: 0 auto;
+            background-color: rgb(175, 57, 57);  
+        }
+        .tap-bar{
+            width: 100%;
+            height: 40px;
+            background-color: #ffffff;
+        }
+        .logo{
+            float: left;
+            margin-left: 70px;
+            margin-top: 8px;
+            width: 90px;
+            margin-right: 8px;
+        }
+        .br{
+            border-left: 1px #CCCCCC solid;
+            float: left;
+            height: 100%;
+        }
+        .sign-icon{
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        .sign-in{
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 5px;
+        }
+        .sign-in p a{
+            text-decoration: none;
+            color: black;
+        }
+        .news{
+            border-left: 1px #CCCCCC solid;
+            height: 40px;
+            position: absolute;
+            display: inline-block;
+            margin-left: 90px;
+            
+        }
+        .news p{
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        .news a{
+            text-decoration: none;
+            /* padding-top: 20px; */
+            color: black;
+            font-size: 16px;
+            float: left;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 10px;
+            
+        }
+        .sport{
+            border-left: 1px #CCCCCC solid;
+            height: 40px;
+            float: left;
+            position: absolute;
+            display: inline-block;
+            margin-left: 165px;
+        }
+        .sport p{
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .sport a{
+            text-decoration: none;
+            padding-top: 20px;
+            color: black;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        .weather{
+            border-left: 1px #CCCCCC solid;
+            height: 40px;
+            float: left;
+            position: absolute;
+            display: inline-block;
+            margin-left: 230px;
+        }
+        .weather p{
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .weather a{
+            text-decoration: none;
+            padding-top: 20px;
+            color: black;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        .shop{
+            border-left: 1px #CCCCCC solid;
+            height: 40px;
+            float: left;
+            position: absolute;
+            display: inline-block;
+            margin-left: 315px;
+        }
+        .shop p{
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .shop a{
+            text-decoration: none;
+            padding-top: 20px;
+            color: black;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .Earth{
+            border-left: 1px #CCCCCC solid;
+            height: 40px;
+            float: left;
+            position: absolute;
+            display: inline-block;
+            margin-left: 380px;
+        }
+        .Earth p{
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .Earth a{
+            text-decoration: none;
+            padding-top: 20px;
+            color: black;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .Travel{
+            border-left: 1px #CCCCCC solid;
+            height: 40px;
+            float: left;
+            position: absolute;
+            display: inline-block;
+            margin-left: 445px;
+        }
+        .Travel p{
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .Travel a{
+            text-decoration: none;
+            padding-top: 20px;
+            color: black;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .More{
+            border-left: 1px #CCCCCC solid;
+            height: 40px;
+            float: left;
+            position: absolute;
+            display: inline-block;
+            margin-left: 510px;
+        }
+        .More p{
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .More a{
+            text-decoration: none;
+            padding-top: 10px;
+            color: black;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .search-bar{
+            border-left: 1px #CCCCCC solid;
+            height: 40px;
+            float: left;
+            position: absolute;
+            display: inline-block;
+            margin-top: 0px;
+            margin-left: 680px;
+        }
+        .searchInput{
+            border: none;
+            background-color: #E6E8EA;
+            margin-left: 15px;
+            height: 23px;
+            width: 200px;
+            margin-top: 10px;
+            padding-left: 5px;
+            margin-right: 0px;
+        } 
+        .searchButton{
+            margin-left: 690px;
+            border: none;
+            height: 23px;
+            margin-top: 5px;
+            width: 220px;
+            background-color: #E6E8EA;
+        }
+        .searchText{
+            float: left;
+            padding-left: 5px;
+            font-weight: bold;
+        } 
+        .menu-bar{
+            background-color: #c00101;
+            height: 90px;
+            width: 100%;
+            /* background-image: url(img/bg.jpg);
+            object-position: top; */
+
+        }  
+        .menu-bar h1{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            margin-left: 60px;
+            padding-top: 10px;
+            display: block;
+        }
+        .nav-bar{
+            width: 100%;
+            padding-top: 8px;
+            height: 30px;
+            background-color: #a91717;
+        }
+        .nav-bar ul{
+            margin-left: 60px;  
+        }
+        .nav-bar ul li{
+            list-style: none;
+            padding: 0px 10px;
+        }
+        .nav-bar ul li a{
+            text-decoration: none;
+            color: rgb(250, 250, 250);
+            padding: 0px 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            text-align: center;
+        }
+        .nav-bar ul li a:hover{
+            border-bottom: 2px white solid;
+            opacity: 0.7;
+        }
+        .nav-bar ul li a:active{
+            opacity: 0.3;
+        }
+        
+        .active{
+            border-bottom: 2px white solid;
+            /* opacity: 0.7; */
+        }
+            
+         .advertisement{
+            margin-left: 180px;
+            margin-top: 10px;
+            display: block;
+            height: 70px;
+            width: 950px;
+            float: left; 
+         }
+         h2{
+            width: 678px;
+            float: left;
+            margin-left: 50px;
+            /* margin-right: 180px; */
+            margin-top: 20px;
+            font-size: 34px;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+            /* display: block; */
+         }
+         .p1{
+            width: 290px;
+            margin-left: 50px;
+            float: left;
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #585858;
+            margin-right: 15px;
+            margin-bottom: 10px;
+            font-family: sans-serif;
+         }
+         .newsImage{
+            margin-top: 15px;
+            width: 500px;
+            margin-left: 10px;
+         }
+         .p2{
+            width: 300px;
+            margin-left: 50px;
+            font-size: 16px;
+            color: rgb(31, 31, 31);
+         }
+         .newsImage{
+            margin-left: 25px;
+            width: 500px;
+
+         }
+         .p2 p{
+            color: #333333;
+            font-weight: 520;
+            font-family: Arial, Helvetica, sans-serif;
+         }
+         .spn{
+            color: red;
+            margin-left: 10px;
+         }
+         .p3{
+            margin-top: 15px;
+            font-size: 17px;
+            color: #0a0a0a;
+            line-height: 20px;
+            font-weight: 400;
+         }
+         .paragraph{
+            width: 300px;
+            height: 500px;
+            float: left;
+            margin-top: 160px;
+            font-family: sans-serif;
+            font-weight: 600;
+            padding-right: 20px;
+            margin: 0px;
+            /* border: 1px solid black; */
+            display: inline-block;
+         }
+         .duration{
+            font-size: 14px;
+         }
+         .p4{
+            margin-top: 10px;
+            color: #000000;
+            font-weight: 580;
+         }
+         .live{
+            float: right;
+            width: 400px;
+            height: 400px;
+            margin-top: 30px;
+            /* border: 1px solid black; */
+            margin-right: 85px;
+         }
+         .stream{
+            font-size: 26px;
+            padding: 15px 0px 10px 15px;
+            border-left: 1px solid gray;
+            margin-right: 250px;
+         }
+         .btn{
+            width: 90px;
+            height: 30px;
+            margin-left: 10px;
+            font-size: 20px;
+            color: white;
+            background-color: #c00101;
+            border: none;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 5px;
+            padding-right: 5px;
+         }
+         .wsr{
+            font-size: 25px;
+            padding-left: 10px;
+            font-weight: 400;
+         }
+         .picls{
+            width: 400px;
+            margin-left: 30px;
+            margin-top: 20px;
+         }
+         .border-btn{
+            width: 800px;
+            border-top: 1px solid rgb(165, 164, 164);
+            margin-left: 50px;
+            height: 200px;
+            margin-top: 20px;
+            
+         }
+         .jingad{
+            width: 280px;
+            float: left;
+            margin-left: 50px;
+            margin-right: 20px;
+            margin-top: 30px;
+         }
+         .mosque{
+            margin-left: 40px;
+            margin-top: 30px;
+         }
+         .p10{
+            width: 70px;
+            margin-top: 0px;
+         }
+    </style>
+</head>
+<body> 
+    <div class="container">
+        <div class="tap-bar">
+           <img class="logo" src="img/logo.jpg" alt="" > 
+           <div class="br"></div>
+           <div class="sign-in">
+            <i class="fa-solid fa-circle-user fa-lg" style="margin-top: 20px;
+            margin-left: 20px;"></i>
+            <p class="sign-in"><a href="https://account.bbc.com/auth?realm=%2F&clientId=Account&ptrt=https%3A%2F%2Faccount.bbc.com%2Faccount%3Flang%3Den-GB%26ptrt%3Dhttps%3A%2F%2Fwww.bbc.com%2Fnews%2Fworld-middle-east-68430925&isCasso=false&action=sign-in&redirectUri=https%3A%2F%2Fsession.bbc.com%2Fsession%2Fcallback%3Frealm%3D%2F&service=IdSignInService&nonce=QvH1xlM4-gm3vlU4J6p5ehZQK4p_QtAaEX38">Sign in</a></p>
+           </div>
+           <div class="news">
+                <p>
+                   <a href="#">News</a>
+                </p>
+           </div>
+    
+           <div class="sport">
+                <p>
+                   <a href="#">Sport</a>
+                </p>
+           </div>
+
+           <div class="weather">
+            <p>
+               <a href="#">Weather</a>
+            </p>
+          </div>
+
+          <div class="shop">
+            <p>
+               <a href="#">Shop</a>
+            </p>
+          </div>
+
+          <div class="Earth">
+            <p>
+               <a href="#">Earth</a>
+            </p>
+          </div>
+
+          <div class="Travel">
+            <p>
+               <a href="#">Travel</a>
+            </p>
+          </div>
+
+          <div class="More">
+            <div class="search-bar">
+                
+            </div>
+            <p>
+               <a href="#">More</a>
+            </p>
+             <i class="fa-solid fa-caret-down" style="color: #000000; margin-left: 90px;"></i>
+            </div>
+            <div class="search-bar">
+            </div>
+            <button class="searchButton">
+                <p class="searchText">Search</p>
+                <!-- <input type="text" placeholder="Search" class="searchInput"> -->
+                <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #000000;float: right; margin-right: 5px; margin-top: 8px;"></i>
+            </button>
+        </div>  
+        <div class="menu-bar">
+            <h1>NEWS</h1>
+            <div class="nav-bar">
+                <ul>
+                    <li>
+                        <a href="#" class="active">Home</a>
+                        <a href="#">Video</a>
+                        <a href="#">World</a>
+                        <a href="#">UK</a>
+                        <a href="#">Business</a>
+                        <a href="#">Tech</a>
+                        <a href="#">Science</a>
+                        <a href="#">Magazine</a>
+                        <a href="#">Entertainment &  Arts</a>
+                        <a href="#">Health</a>
+                        <a href="#">World News TV</a>
+                        <a href="#">More</a>
+                        <i class="fa-solid fa-caret-down" style="color: #ffffff; margin-left: 5px;"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="advrr">
+        <img src="img/yeye.jpg" alt="" class="advertisement">
+       <h2> Pope arrives for Greek migrant camp visit</h2>
+    </div>
+    <div class="live">
+       <p class="stream"> Watch/Listen </p>
+       <button class="btn">
+        
+        <i class="fa-solid fa-volume-low" style="color: #ffffff;"></i>
+        LIVE
+        
+       </button>
+       <p class="wsr">World Service radio</p>
+       <img src="img/ls.jpg" alt="" class="picls">
+    </div>
+    <div class="paragraph">
+        <p class="p1">Pope Francis arrives on the Greek Island of Lesbos to show support for refugees trying to reach Europe.
+            <br> 
+            <div class="p2"> 
+            <i class="fa-regular fa-clock fa-xs" style="color: #000000;">
+            </i>
+           <p class="duration"> 45 minutes ago <span class="spn">Europe</span> </p>
+           <p class="p3">Why Pope is going to Lesbos</p>
+           <p class="p3">Short migrant journey back to turkey</p>
+           <p class="p3">Bewildered migrants await fate on Lesbos</p>
+           <p class="p4">
+            <i class="fa-brands fa-youtube"></i>
+            'Deportation is big mistake'
+           </p>
+         </div>
+        </p>
+        <!-- <img src="img/jiingad.jpg" alt="" class="jingad">   -->
+    </div>
+  <img src="img/pic.jpg" alt="" class="newsImage"> 
+    
+  <!-- <div class="border-btn">
+  
+  <img src="img/mosque.jpg" alt="" class="mosque">
+  <p class="p10">UN official condemns Trump over turture</p>
+  </div>  -->
+</body>
+</html>
